@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kyle Zaragoza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Apply some basic styling to the sections */
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .section {
+            height: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+        }
+
+        /* Style the first section with a different background color */
+        #section1 {
+            background-color: #f2f2f2;
+        }
+
+        /* Add styles for the links */
+        .section a {
+            position: relative;
+            color: #000;
+            text-decoration: none;
+            transition: all 0.2s ease-in-out;
+            font-size: 24pt;
+            font-weight: 700;
+            font-family: 'Noto Serif', serif;
+        }
+
+        .section a:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            /* background-color: #e04a63; */
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.2s ease-in-out;
+        }
+
+        .section a:hover:before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+
+        .red a:hover {
+            color: #e04a63;
+        }
+
+        .red a:before {
+            background-color: #e04a63;
+        }
+
+        .blue a:hover {
+            /* color: #4a72e0; */
+            color: #fff;
+        }
+
+        .blue a:before {
+            /* background-color: #4a72e0; */
+            background-color: #fff;
+        }
+
+        .background-red {
+            background: #ffffff;
+            -webkit-transition: background 0.2s; /* For Safari 3.0 to 6.0 */
+            transition: background 0.2s; /* For modern browsers */
+        }
+
+        .background-red:hover {
+            background: #4a72e0;
+            text-decoration: none; border-bottom:2px solid #fff;
+        }
+
+        .background-red:hover a {
+            color: #fff; 
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+        }
+
+        .child-image {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 25px;
+            left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="section1" class="section red">
+        <a href="https://redsweaterstudio.com/">What I'm Doing</a>
+    </section>
+    <section id="section2" class="section blue background-red">
+        <a href="https://www.linkedin.com/in/kylezaragoza">What I Did</a>
+    </section>
+    <div id="child-image" class="child-image">
+        <a href="#">
+            <img src="images/child-kyle-no-legs.png" onmouseover="this.src='images/child-kyle-no-legs-color.png';"
+                onmouseout="this.src='images/child-kyle-no-legs.png';" />
+        </a>
+    </div>
+</body>
+
+</html>
